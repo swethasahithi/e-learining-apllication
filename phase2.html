@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>General Citizen</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://mdbootstrap.com/previews/docs/latest/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://mdbootstrap.com/previews/docs/latest/css/mdb.min.css" rel="stylesheet">
+    <link href="css/general_citizen.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #474e5d;
+    font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -8px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: -23%;
+}
+
+/* Place the container to the right */
+.right {
+    left: 23%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+</style>
+
+</head>
+<body>
+ <!--Main Navigation-->
+<header>
+<nav class="navbar navbar-expand-lg fixed-top header-gen">
+  <div class="d-flex align-items-center">
+    <div class="d-flex justify-content-start">
+      <a class="navbar-brand" href="index.html">
+      General Citizens
+      </a>
+    </div>
+    <div class="d-flex justify-content-center">
+      <img src="images/image.png" alt="logo" class="logo"/>
+      <div class="d-flex align-items-center navbar-brand">State of Maharashtra</div>
+    </div>    
+    <div class="d-flex justify-content-end">
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                        <a class="nav-link" href="general_citizen.php">Back <span class="sr-only">(current)</span></a>
+                  </li>
+                 
+              </ul>
+          </div>
+    </div>
+  </div>
+</nav>
+</header>
+
+			
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>2019</h2>
+      <p>The NDA government has taken a few steps towards making ‘Housing for all’ a reality by 2022. The Pradhan Mantri Awas Yojana (PMAY) has recently expanded its scope to cater to the housing needs of the mid-income group, besides the economically weaker sections (EWS) and low-income group (LIG). Early this month, the Prime Minister doubled the quantum of loan eligible for interest benefits under the PMAY in urban areas to ₹12 lakh.
+	  </p>
+	</div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2018</h2>
+      <p>PMAY was launched in June 2015. The Government envisages building affordable pucca houses with water facility, sanitation and electricity supply round-the-clock. The scheme originally was meant to cover people in the EWS (annual income not exceeding ₹3 lakh) and LIG (annual income not exceeding ₹6 lakh) sections, but now covers the mid-income group (MIG) as well.
+		</p>
+	</div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2017</h2>
+      <p>PMAY was launched in June 2015. The Government envisages building affordable pucca houses with water facility, sanitation and electricity supply round-the-clock. The scheme originally was meant to cover people in the EWS (annual income not exceeding ₹3 lakh) and LIG (annual income not exceeding ₹6 lakh) sections, but now covers the mid-income group (MIG) as well.
+	  </p>
+	</div>
+  </div>
+  
+</body>
+</html>

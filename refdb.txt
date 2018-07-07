@@ -1,0 +1,10 @@
+/*
+quiz queries...getting the questions of a particular subtopic;
+			$getquizid="select `quiz_id` from `quiz_module` where `topic_name`='".$topic."' and `sub_topic_name`='".$sub_topic."'";
+        	$result=($conn->query($getquizid))->fetch_assoc();
+        	$quiz_id=$result['quiz_id'];
+        	$getquestions=$conn->query("select `question_id` from quiz_question where `quiz_id`='".$quiz_id."'");
+        	$query="select * from `questions` where `question_id`=?";
+
+
+*/

@@ -1,0 +1,17 @@
+/*
+QUIZ_CONNECTIONS MODULE
+*/
+class QuizConnection{
+	function getConnection(){
+		$conn=new mysqli("localhost","root","MadhuMysql");
+			if($conn->connect_error){
+				header("location:db_error.php");
+			}
+			else{
+				$conn->select_db("sih_db");
+				return $conn;
+			}		
+
+	}
+
+}
